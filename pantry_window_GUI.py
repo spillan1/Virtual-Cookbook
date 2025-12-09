@@ -15,10 +15,10 @@ class PantryWindow:
 
         self.window = tk.Toplevel(master)
         self.window.title("Pantry")
-        self.window.geometry("400x550")  
+        self.window.geometry("400x550")
 
         #pantry display
-        self.tree = ttk.Treeview(self.window, columns=("quantity", "unit"), show="headings")
+        self.tree = ttk.Treeview(self.window,columns=("quantity", "unit"), show="headings")
         self.tree.heading("quantity", text="Quantity")
         self.tree.heading("unit", text="Unit")
         self.tree.pack(fill="both", expand=True, pady=10)
