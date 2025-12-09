@@ -1,0 +1,62 @@
+{
+    "recipes": [
+        {
+            "name": "omlette",
+            "ingredients": {
+                "eggs": [
+                    2.0,
+                    "count"
+                ],
+                "milk": [
+                    0.25,
+                    "cups"
+                ]
+            },
+            "instructions": [
+                "whisk milk and eggs together",
+                "cook on skillet"
+            ],
+            "tags": []
+        },
+        {
+            "name": "egg test",
+            "ingredients": {
+                "eggs": [
+                    1.0,
+                    "count"
+                ]
+            },
+            "instructions": [
+                "test"
+            ],
+            "tags": []
+        },
+        {
+            "name": "test2",
+            "ingredients": {
+                "apple": [
+                    2.0,
+                    "count"
+                ],
+                "juice": [
+                    1.0,
+                    "cups"
+                ]
+            },
+            "instructions": [
+                "test2"
+            ],
+            "tags": []
+        }
+    ],
+    "pantry": {
+        "eggs": [
+            2.0,
+            "count"
+        ],
+        "milk": [
+            1.75,
+            "cups"
+        ]
+    }
+}

@@ -21,7 +21,7 @@ class Cookbook:
         
         for name, recipe in self.recipes.items():
             if recipe.can_make(self.pantry):
-                can_make.appen(name)
+                can_make.append(name)
         
         return can_make
 
@@ -100,7 +100,7 @@ class Cookbook:
 if __name__ == "__main__":
     from recipe_define import Recipe
 
-    print("=== Testing Cookbook ===")
+    print("Testing Cookbook")
 
     # Create cookbook
     cb = Cookbook()
