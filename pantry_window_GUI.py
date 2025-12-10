@@ -10,32 +10,30 @@ from tkinter import ttk, messagebox
 
 
 class PantryWindow:
+    """defines a PantryWindow class"""
     def __init__(self, master, cookbook):
         self.cookbook = cookbook
 
         self.window = tk.Toplevel(master)
         self.window.title("Pantry")
         self.window.geometry("400x550")
+        #self.window.configure(bg="#F9D790")
 
         #pantry display
         self.tree = ttk.Treeview(self.window,columns=("quantity", "unit"), show="headings")
         self.tree.heading("quantity", text="Quantity")
         self.tree.heading("unit", text="Unit")
         self.tree.pack(fill="both", expand=True, pady=10)
-
         self.load_pantry()
 
         #ingredients section
-        tk.Label(self.window, text="Add Ingredient", font=("Helvetica", 12, "bold")).pack(pady=5)
-
+        tk.Label(self.window, font=("Helvetica", 12, "bold"),text="Add Ingredient").pack(pady=5)
         tk.Label(self.window, text="Ingredient Name:").pack()
         self.name_entry = tk.Entry(self.window)
         self.name_entry.pack()
-
         tk.Label(self.window, text="Quantity:").pack()
-        self.qty_entry = tk.Entry(self.window)
-        self.qty_entry.pack()
-
+        self.amount_enter = tk.Entry(self.window)
+        self.amount_enter.pack()
         tk.Label(self.window, text="Unit:").pack()
         self.unit_entry = tk.Entry(self.window)
         self.unit_entry.pack()
@@ -49,8 +47,15 @@ class PantryWindow:
         self.delete_button.pack(pady=10)
 
 
-    #load pantry
     def load_pantry(self):
+        '''
+        loads the pantry
+
+        Returns
+        -------
+        None.
+
+        '''
         for row in self.tree.get_children():
             self.tree.delete(row)
 
@@ -59,44 +64,33 @@ class PantryWindow:
 
     
     def add_ingredient(self):
-        name = self.name_entry.get().strip()
-        qty_str = self.qty_entry.get().strip()
-        unit = self.unit_entry.get().strip()
+        '''
+        adgs an ingredient to the pantry
 
-        if not name or not qty_str or not unit:
-            messagebox.showerror("Error", "Please fill all fields.")
-            return
+        Returns
+        -------
+        None.
 
-        try:
-            qty = float(qty_str)
-        except ValueError:
-            messagebox.showerror("Error", "Quantity must be a number.")
-            return
+        '''
+        name = self.name_entry.get()
+        amountstring = self.amount_enter.get()
+        unit = self.unit_entry.get()
 
-        self.cookbook.pantry.add_ingredient(name, qty, unit)
+        amount = float(amountstring)
+        self.cookbook.pantry.add_ingredient(name, amount, unit)
         self.cookbook.save()
         self.load_pantry()
         self.name_entry.delete(0, tk.END)
-        self.qty_entry.delete(0, tk.END)
+        self.amount_enter.delete(0, tk.END)
         self.unit_entry.delete(0, tk.END)
 
     def delete_ingredient(self):
         selected_item = self.tree.focus()
-
-        if not selected_item:
-            messagebox.showerror("Error", "Please select an ingredient to delete.")
-            return
-
         values = self.tree.item(selected_item, "values")
-        name_qty_string = values[0]              
-        name = name_qty_string.split(":")[0]     
-
-        confirm = messagebox.askyesno("Delete Ingredient",f"Remove '{name}' from the pantry?")
-        if not confirm:
-            return
+        selection = values[0]              
+        name = selection.split(":")[0]     
 
         if name in self.cookbook.pantry.inventory:
             del self.cookbook.pantry.inventory[name]
-
         self.cookbook.save()
         self.load_pantry()

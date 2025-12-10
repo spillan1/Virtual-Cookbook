@@ -15,21 +15,53 @@ from recipe_list_window_GUI import RecipeListWindow
 from PIL import Image, ImageTk
 import os
 
-def main():
+if __name__ == "__main__":
     cookbook = Cookbook()
     cookbook.load()
     
     def open_pantry_window():
+        '''
+        opens a separate pantry window
+
+        Returns
+        -------
+        None.
+
+        '''
         PantryWindow(root, cookbook)
 
     def open_add_recipe_window():
+        '''
+        opens a separate add recipe window
+
+        Returns
+        -------
+        None.
+
+        '''
         AddRecipeWindow(root, cookbook)
 
     def open_recipe_list_window():
+        '''
+        opens a separate recipe list window
+
+        Returns
+        -------
+        None.
+
+        '''
         RecipeListWindow(root, cookbook)
 
     def open_can_make_window():
-        recipes = cookbook.recipes_you_can_make()
+        '''
+        opens a separate window of recipoes that can be made
+
+        Returns
+        -------
+        None.
+
+        '''
+        recipes = cookbook.can_make()
         if recipes:
             messagebox.showinfo("Recipes You Can Make", "\n".join(recipes))
         else:
@@ -40,14 +72,11 @@ def main():
     root.geometry("400x400")
     root.configure(bg="#F9D790")
 
-    title_label = tk.Label(root, bg="#F1A90E", fg="black", text="Virtual Cookbook", font=("Georgia", 30))
-    title_label.pack(pady=50)
+    title_label = tk.Label(root, bg="#F1A90E", fg="black", text="Virtual Cookbook", font=("Georgia", 30)).pack(pady=50)
     
-    btn1 = tk.Button(root, highlightbackground="#F1A90E", text="View Pantry", width=25, command=open_pantry_window)
-    btn1.pack(pady=5)
+    btn1 = tk.Button(root, highlightbackground="#F1A90E", text="View Pantry", width=25, command=open_pantry_window).pack(pady=5)
 
-    btn2 = tk.Button(root, highlightbackground="#F1A90E", text="Add Recipe", width=25, command=open_add_recipe_window)
-    btn2.pack(pady=5)
+    btn2 = tk.Button(root, highlightbackground="#F1A90E", text="Add Recipe", width=25, command=open_add_recipe_window).pack(pady=5)
 
     btn3 = tk.Button(root, highlightbackground="#F1A90E", text="View Recipes", width=25, command=open_recipe_list_window)
     btn3.pack(pady=5)
@@ -61,10 +90,9 @@ def main():
         root.destroy()
 
     root.protocol("WM_DELETE_WINDOW", on_close)
-
     root.mainloop()
 
 
-if __name__ == "__main__":
-    main()
+
+
 

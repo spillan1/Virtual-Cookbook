@@ -1,62 +1,63 @@
 {
     "recipes": [
         {
-            "name": "omlette",
+            "name": "omelette",
             "ingredients": {
                 "eggs": [
                     2.0,
                     "count"
                 ],
                 "milk": [
+                    0.2,
+                    "cups"
+                ]
+            },
+            "instructions": [
+                "1. preheat pan on medium heat",
+                "2. whisk together eggs and milk",
+                "3. cook on pan until edges turn golden",
+                "4. flip, and cook other side until golden"
+            ]
+        },
+        {
+            "name": "Baked Salmon",
+            "ingredients": {
+                "salmon": [
+                    1.0,
+                    "count"
+                ],
+                "garlic": [
+                    2.0,
+                    "cloves"
+                ],
+                "soy sauce": [
+                    0.25,
+                    "cups"
+                ],
+                "honey": [
                     0.25,
                     "cups"
                 ]
             },
             "instructions": [
-                "whisk milk and eggs together",
-                "cook on skillet"
-            ],
-            "tags": []
-        },
-        {
-            "name": "egg test",
-            "ingredients": {
-                "eggs": [
-                    1.0,
-                    "count"
-                ]
-            },
-            "instructions": [
-                "test"
-            ],
-            "tags": []
-        },
-        {
-            "name": "test2",
-            "ingredients": {
-                "apple": [
-                    2.0,
-                    "count"
-                ],
-                "juice": [
-                    1.0,
-                    "cups"
-                ]
-            },
-            "instructions": [
-                "test2"
-            ],
-            "tags": []
+                "1. defrost salmon",
+                "2. preheat oven to 425F",
+                "3. mince garlic",
+                "4. whisk together soy sauce, honey, and garlic",
+                "5. marinate salmon in honey mixture for 15 minutes",
+                "6. place salmon in baking sheet",
+                "7. bake for 15 minutes"
+            ]
         }
     ],
     "pantry": {
-        "eggs": [
-            2.0,
-            "count"
-        ],
         "milk": [
-            1.75,
+            0.8,
             "cups"
+        ],
+        "eggs": [
+            5.0,
+            "count"
         ]
     }
 }

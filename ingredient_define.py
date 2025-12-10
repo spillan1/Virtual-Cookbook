@@ -5,7 +5,6 @@ Created on Sun Dec  7 15:12:17 2025
 
 @author: shriya
 """
-
 class Ingredient:
     def __init__(self, name: str, unit: str):
         self.name = name.lower().strip()
@@ -14,21 +13,18 @@ class Ingredient:
     def __str__(self):
         return f"{self.name} ({self.unit})"
     
-    def to_dict(self) -> dict:
-        return {
-            "name": self.name,
-            "unit": self.unit
-        }
+    def to_dict(self):
+        return {"name": self.name,"unit": self.unit}
     
     @classmethod
     def from_dict(cls, data: dict):
         """
-        Create an Ingredient instance from a dictionary.
+        Create an Ingredient object from a dictionary.
         
         Parameters
         ----------
         data : dict
-            A dictionary containing 'name' and 'unit' keys.
+           dictionary 
 
         Returns
         -------
@@ -37,24 +33,21 @@ class Ingredient:
         return cls(data["name"], data["unit"])
 
 if __name__ == "__main__":
-    # Test the Ingredient class functionality
+    #testing
+    flour = Ingredient("  Flour", " g ")
 
-    print("Testing Ingredient Class")
-
-    flour = Ingredient("  Flour  ", " g ")
-
-    print("Ingredient:", flour)                 
-    print("Name:", flour.name)                  
-    print("Unit:", flour.unit)                  
+    print(flour)                 
+    print(flour.name)                  
+    print(flour.unit)                  
 
     flour_dict = flour.to_dict()
-    print("As dict:", flour_dict)               
+    print(flour_dict)               
 
     flour_copy = Ingredient.from_dict(flour_dict)
-    print("Recreated Ingredient:", flour_copy)  
+    print(flour_copy)  
 
-    print("Name matches:", flour_copy.name == flour.name)   
-    print("Unit matches:", flour_copy.unit == flour.unit)   
+    print(flour_copy.name == flour.name)   
+    print(flour_copy.unit == flour.unit)   
 
 
 
