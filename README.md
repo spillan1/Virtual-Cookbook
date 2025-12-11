@@ -1,6 +1,6 @@
 # Virtual-Cookbook
 # Introduction
-irtual Cookbook is a Python-based application that lets you manage ingredients, organize a pantry, and build recipes to be stored in the cookbook. It models real cooking workflows using object-oriented design and can check whether a recipe can be made with the ingredients you have. It can also return a list of all the recipes you can make.
+Virtual Cookbook is a Python-based application that lets you manage ingredients, organize a pantry, and build recipes to be stored in the cookbook. It models real cooking workflows using object-oriented design and can check whether a recipe can be made with the ingredients you have. It can also return a list of all the recipes you can make.
 
 # How to Use 
 Download the files in this repo  
