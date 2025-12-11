@@ -1,13 +1,15 @@
 # Virtual-Cookbook
 # Introduction
-This code allows you to store any indredients you buy, store any recipes you find, and returns a list of the recipes you can make.
+irtual Cookbook is a Python-based application that lets you manage ingredients, organize a pantry, and build recipes to be stored in the cookbook. It models real cooking workflows using object-oriented design and can check whether a recipe can be made with the ingredients you have. It can also return a list of all the recipes you can make.
 
-# Usage 
+# How to Use 
 Download the files in this repo  
 Run:  
 ```python 
 main.py
 ```
+You can now navigate through the cookbook using the buttons in the window. When you exit the cookbook, all of your recipes and ingredients will be stored in a file titled cookbook_data.JSON
+
 # GUI Overview
 <div style="display: flex; align-items: flex-start; gap: 10px;">
   <img width="393" height="421" src="https://github.com/user-attachments/assets/54834768-d1cd-4f03-b281-0fa2e82f1dd7" alt="Screenshot 1">
