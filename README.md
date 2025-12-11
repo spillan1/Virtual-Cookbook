@@ -4,5 +4,5 @@ This code allows you to store any indredients you buy, store any recipes you fin
 
 # Usage 
 Download the files in this repo
-Run:
-main.py
+#Run:
+python main.py
