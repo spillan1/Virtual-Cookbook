@@ -8,7 +8,7 @@ Run:
 ```python 
 main.py
 ```
-You can now navigate through the cookbook using the buttons in the window. When you exit the cookbook, all of your recipes and ingredients will be stored in a file titled cookbook_data.JSON
+You can now navigate through the cookbook using the buttons in the windows shown below. You can select a recipe or ingredient by clicking on them. When you exit the cookbook, all of your recipes and ingredients will be stored in a file titled cookbook_data.JSON
 
 # GUI Overview
 <div style="display: flex; align-items: flex-start; gap: 10px;">
