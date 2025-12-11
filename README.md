@@ -9,8 +9,10 @@ Run:
 main.py
 ```
 # GUI Overview
-<img width="393" height="421" style="vertical-align: top;" alt="Screenshot 2025-12-10 at 10 46 40 PM" src="https://github.com/user-attachments/assets/54834768-d1cd-4f03-b281-0fa2e82f1dd7" />
-<img width="396" height="572" style="vertical-align: top;" alt="Screenshot 2025-12-10 at 10 46 48 PM" src="https://github.com/user-attachments/assets/94b9b106-f469-4b49-954c-8a52c5d11ce6" />
-<img width="495" height="775" style="vertical-align: top;" alt="Screenshot 2025-12-10 at 10 46 56 PM" src="https://github.com/user-attachments/assets/c76be0e7-73a9-4f77-af21-ab8b2265d105" />
-<img width="494" height="623" style="vertical-align: top;" alt="Screenshot 2025-12-10 at 10 47 09 PM" src="https://github.com/user-attachments/assets/0cb62d8e-37ca-4ec8-9859-e3eab367aabd" />
+<div style="display: flex; align-items: flex-start; gap: 10px;">
+  <img width="393" height="421" src="https://github.com/user-attachments/assets/54834768-d1cd-4f03-b281-0fa2e82f1dd7" alt="Screenshot 1">
+  <img width="396" height="572" src="https://github.com/user-attachments/assets/94b9b106-f469-4b49-954c-8a52c5d11ce6" alt="Screenshot 2">
+  <img width="495" height="775" src="https://github.com/user-attachments/assets/c76be0e7-73a9-4f77-af21-ab8b2265d105" alt="Screenshot 3">
+  <img width="494" height="623" src="https://github.com/user-attachments/assets/0cb62d8e-37ca-4ec8-9859-e3eab367aabd" alt="Screenshot 4">
+</div>
 <img width="243" height="161" style="vertical-align: top;" alt="Screenshot 2025-12-10 at 10 47 18 PM" src="https://github.com/user-attachments/assets/bc4f69d7-cbe6-46b7-9888-22fcbf84b660" />
