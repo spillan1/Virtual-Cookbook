@@ -16,3 +16,12 @@ main.py
   <img width="494" height="623" src="https://github.com/user-attachments/assets/0cb62d8e-37ca-4ec8-9859-e3eab367aabd" alt="Screenshot 4">
 </div>
 <img width="243" height="161" style="vertical-align: top;" alt="Screenshot 2025-12-10 at 10 47 18 PM" src="https://github.com/user-attachments/assets/bc4f69d7-cbe6-46b7-9888-22fcbf84b660" />
+
+# Unit Testing
+test_cookbook.py
+test_ingredient.py
+test_pantry.py
+test_recipe.py
+
+# Liscence
+This project is licensed under the MIT License. See the LICENSE file for details.
