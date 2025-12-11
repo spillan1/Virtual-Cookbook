@@ -74,15 +74,15 @@ if __name__ == "__main__":
 
     title_label = tk.Label(root, bg="#F1A90E", fg="black", text="Virtual Cookbook", font=("Georgia", 30)).pack(pady=50)
     
-    btn1 = tk.Button(root, highlightbackground="#F1A90E", text="View Pantry", width=25, command=open_pantry_window).pack(pady=5)
+    view_pantry_btn = tk.Button(root, highlightbackground="#F1A90E", text="View Pantry", width=25, command=open_pantry_window).pack(pady=5)
 
-    btn2 = tk.Button(root, highlightbackground="#F1A90E", text="Add Recipe", width=25, command=open_add_recipe_window).pack(pady=5)
+    add_recipe_btn = tk.Button(root, highlightbackground="#F1A90E", text="Add Recipe", width=25, command=open_add_recipe_window).pack(pady=5)
 
-    btn3 = tk.Button(root, highlightbackground="#F1A90E", text="View Recipes", width=25, command=open_recipe_list_window)
-    btn3.pack(pady=5)
+    view_recipes_btn = tk.Button(root, highlightbackground="#F1A90E", text="View Recipes", width=25, command=open_recipe_list_window)
+    view_recipes_btn.pack(pady=5)
 
-    btn4 = tk.Button(root, highlightbackground="#F1A90E", text="What Can I Make?", width=25, command=open_can_make_window)
-    btn4.pack(pady=5)
+    can_make_btn = tk.Button(root, highlightbackground="#F1A90E", text="What Can I Make?", width=25, command=open_can_make_window)
+    can_make_btn.pack(pady=5)
     
     def on_close():
         cookbook.save()
