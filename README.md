@@ -30,5 +30,5 @@ Tag system to filter through recipes
 Improved GUI  
 Ingredient expiration date option
 
-# Liscence
+# Licence
 This project is licensed under the MIT License. See the LICENSE file for details.
